@@ -2,7 +2,7 @@
   <div class="home">
     <b-breadcrumb :items="breadcrumb"></b-breadcrumb>
     <div>
-      <div v-if="cars.length===0">
+      <div v-if="cars && cars.length===0">
         <img id="no-car-image" alt="No cars Image" src="../assets/no-cars.png">
         <h2> No vehicle in the fleet, please add one vehicle!</h2>
       </div>
@@ -11,7 +11,7 @@
         hover
         responsive
         @row-clicked="onNavigate"
-        v-if="cars.length>0"
+        v-if="cars && cars.length>0"
         :items="cars"
         :fields="fields">
           <template v-slot:cell(details)="data">
