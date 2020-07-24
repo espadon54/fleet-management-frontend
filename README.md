@@ -37,3 +37,4 @@ npm run lint
 ### TODO
 - Use delete instead of post for delete car
 - Add odometer, battery and fuel in the creation form
+- Do CI with Github actions
